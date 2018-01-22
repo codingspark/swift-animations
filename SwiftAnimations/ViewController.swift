@@ -392,8 +392,8 @@ class KeyframesViewController : BaseAnimationViewController {
     
     override func animate() {
         
-        // self.recursiveAnimations()
-        self.keyframeAnimation()
+        self.recursiveAnimations()
+        // self.keyframeAnimation()
     }
     
     
@@ -1041,8 +1041,7 @@ class GestureViewController : BaseAnimationViewController {
         UIView.animate(withDuration: 1.5, delay: 1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             
             self.messageLabel.transform = CGAffineTransform.identity
-            
-        }) { _ in }
+        })
         
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(drag(recognizer:)))
@@ -1260,6 +1259,6 @@ class ThanksViewController : BaseAnimationViewController {
                 label.alpha = 1.0
             }
             
-        }, completion: nil)
+        })
     }
 }
